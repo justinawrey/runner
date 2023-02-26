@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -399,15 +399,15 @@ TextureImporter:
       characters_38: 1088451939
       characters_29: -1515433110
       characters_22: -1319878061
+      Bear jump down: -1888854124
       characters_12: 1521753604
-      Snake Idle 2: 1870598148
       characters_41: 931510271
       Snake Idle 1: -974032087
       characters_39: -1740506193
+      Snake Idle 2: 1870598148
       characters_19: 1987511621
       characters_40: -1166599869
       characters_59: 1827022163
-      Bear jump down: -1888854124
       characters_48: 1320223351
       Snake Idle 3: 1568662464
       characters_10: -215562937

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3707567369478861571}
   - component: {fileID: -1666273341913183081}
   - component: {fileID: -2057947326259657851}
+  - component: {fileID: 8695479775989372936}
   m_Layer: 0
   m_Name: Snake
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,22 +82,22 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.030988693, y: -0.1930747}
-      - {x: -0.33127743, y: -0.19197103}
-      - {x: -0.41174173, y: -0.32216406}
+    - - {x: 0.025091574, y: -0.21666265}
+      - {x: -0.33127743, y: -0.203765}
+      - {x: -0.39994776, y: -0.32216406}
       - {x: -0.3608632, y: -0.4946289}
       - {x: -0.2654581, y: -0.5660448}
       - {x: -0.24826956, y: -0.8108053}
       - {x: -0.17274761, y: -0.8741455}
-      - {x: -0.17459911, y: -1.0001158}
-      - {x: 0.48965418, y: -1.0001152}
+      - {x: -0.1392173, y: -1.0001158}
+      - {x: 0.4542724, y: -1.0001152}
       - {x: 0.45597267, y: -0.9048362}
       - {x: 0.3703828, y: -0.8834772}
       - {x: 0.3789854, y: -0.7599535}
-      - {x: 0.39104939, y: -0.6113019}
+      - {x: 0.3615647, y: -0.6113019}
       - {x: 0.3360691, y: -0.5839443}
       - {x: 0.13334942, y: -0.5681143}
-      - {x: 0.13501406, y: -0.30559713}
+      - {x: 0.11732328, y: -0.30559713}
 --- !u!212 &-1666273341913183081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135,8 +136,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -40198311
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -974032087, guid: 370f8f2ce316847c5a97e7d8eca88c2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -169,3 +170,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!61 &8695479775989372936
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696374519895652699}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6021743, y: 2.7478929}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.20778766, y: 7.4957857}
+  m_EdgeRadius: 0
