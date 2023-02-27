@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -1666273341913183081}
   - component: {fileID: -2057947326259657851}
   - component: {fileID: 8695479775989372936}
+  - component: {fileID: 2686942044473494679}
+  - component: {fileID: -2997850119230513969}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Enemy
@@ -56,7 +58,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!60 &3707567369478861571
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -82,22 +84,23 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.025091574, y: -0.21666265}
-      - {x: -0.33127743, y: -0.203765}
-      - {x: -0.39994776, y: -0.32216406}
-      - {x: -0.3608632, y: -0.4946289}
-      - {x: -0.2654581, y: -0.5660448}
-      - {x: -0.24826956, y: -0.8108053}
-      - {x: -0.17274761, y: -0.8741455}
-      - {x: -0.1392173, y: -1.0001158}
-      - {x: 0.4542724, y: -1.0001152}
-      - {x: 0.45597267, y: -0.9048362}
-      - {x: 0.3703828, y: -0.8834772}
-      - {x: 0.3789854, y: -0.7599535}
-      - {x: 0.3615647, y: -0.6113019}
-      - {x: 0.3360691, y: -0.5839443}
-      - {x: 0.13334942, y: -0.5681143}
-      - {x: 0.11732328, y: -0.30559713}
+    - - {x: 0.0048819035, y: -0.26718697}
+      - {x: -0.26054335, y: -0.25765753}
+      - {x: -0.32247722, y: -0.32216406}
+      - {x: -0.29686576, y: -0.47441924}
+      - {x: -0.22167039, y: -0.5492034}
+      - {x: -0.17701843, y: -0.6010744}
+      - {x: -0.18090385, y: -0.76701766}
+      - {x: -0.1289599, y: -0.85056746}
+      - {x: -0.0987979, y: -1.0001158}
+      - {x: 0.29933116, y: -1.0001152}
+      - {x: 0.30776805, y: -0.8947314}
+      - {x: 0.31649026, y: -0.8767406}
+      - {x: 0.3149881, y: -0.7599535}
+      - {x: 0.31440857, y: -0.64835304}
+      - {x: 0.083447725, y: -0.64794177}
+      - {x: 0.07272026, y: -0.32896593}
+      - {x: 0.06679903, y: -0.30896544}
 --- !u!212 &-1666273341913183081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -137,7 +140,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -40198311
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -974032087, guid: 370f8f2ce316847c5a97e7d8eca88c2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -196,3 +199,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.20778766, y: 7.4957857}
   m_EdgeRadius: 0
+--- !u!114 &2686942044473494679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696374519895652699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b868c978559a448acadaf0479ca0efa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2997850119230513969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696374519895652699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9284a91298734a9398c76edad454cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: 1
