@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollisionController : MonoBehaviour
 {
@@ -35,7 +36,8 @@ public class PlayerCollisionController : MonoBehaviour
   {
     if (collision.gameObject.tag == "Enemy")
     {
-      // Game-over state... do something
+      // TODO!
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
   }
 }
