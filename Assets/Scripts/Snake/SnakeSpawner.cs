@@ -22,10 +22,10 @@ public class SnakeSpawner : MonoBehaviour
   {
     while (true)
     {
-      float interval = Random.Range(0.8f, 1.8f);
+      float interval = Random.Range(0.5f, 1.5f);
       yield return new WaitForSeconds(interval);
       GameObject snake = Instantiate(snakePrefab, transform.position, Quaternion.identity);
-      float speedFactor = Random.Range(1f, 1.5f);
+      float speedFactor = Random.Range(1f, 1.2f);
       snake.GetComponent<SnakeMovement>().SetScrollSpeed(speedFactor);
     }
   }
