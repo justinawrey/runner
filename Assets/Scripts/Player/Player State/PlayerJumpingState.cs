@@ -9,6 +9,9 @@ public class PlayerJumpingState : PlayerBaseState
   private PlayerCollisionController collisionController;
 
   [SerializeField]
+  private ParticleController particleController;
+
+  [SerializeField]
   private Animator animator;
 
   [SerializeField]
@@ -31,6 +34,7 @@ public class PlayerJumpingState : PlayerBaseState
     ctx.rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     animator.ResetTrigger("Landing");
     animator.SetTrigger("Launching");
+    particleController.OnLaunch();
   }
 
   public override void Exit(PlayerContext ctx)
@@ -38,6 +42,7 @@ public class PlayerJumpingState : PlayerBaseState
     animator.ResetTrigger("Launching");
     animator.SetTrigger("Landing");
     animator.SetFloat("Vertical Velocity", 0);
+    particleController.OnLand();
   }
 
   public override void OnUpdate(PlayerContext ctx)
