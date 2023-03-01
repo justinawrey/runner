@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Scrollable : MonoBehaviour
+public class Scrollable : MonoBehaviour, IFreezable
 {
   private float BASE_SCROLL_SPEED = 5f;
+  private int REPOSITION_BUFFER_UNITS = 5;
   private Tilemap tileMap;
   private int width;
+  private bool stopped = false;
 
   [SerializeField]
   private float scrollSpeed = 1f;
@@ -25,15 +27,14 @@ public class Scrollable : MonoBehaviour
     print($"WIDTH: {width}");
   }
 
-  [ContextMenu("Compress bounds")]
-  private void CompressBounds()
-  {
-    GetComponent<Tilemap>().CompressBounds();
-  }
-
   private void Update()
   {
-    if (transform.position.x < -width)
+    if (stopped)
+    {
+      return;
+    }
+
+    if (transform.position.x < -(width + REPOSITION_BUFFER_UNITS))
     {
       transform.position += new Vector3(width * 2, 0, 0);
     }
@@ -41,5 +42,10 @@ public class Scrollable : MonoBehaviour
     {
       transform.position -= new Vector3(BASE_SCROLL_SPEED * scrollSpeed * Time.deltaTime, 0, 0);
     }
+  }
+
+  public void Freeze()
+  {
+    stopped = true;
   }
 }

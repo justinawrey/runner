@@ -6,6 +6,9 @@ public class PlayerJumpingState : PlayerBaseState
   private bool delayingCollision = false;
 
   [SerializeField]
+  private PlayerInputController inputController;
+
+  [SerializeField]
   private PlayerCollisionController collisionController;
 
   [SerializeField]
@@ -53,7 +56,7 @@ public class PlayerJumpingState : PlayerBaseState
     }
 
     // Apply jump cut
-    if (PlayerInputController.JumpInputUp)
+    if (inputController.JumpInputUp)
     {
       ctx.rb.AddForce(Vector2.down * ctx.rb.velocity.y * (1 - jumpCutMultiplier), ForceMode2D.Impulse);
     }

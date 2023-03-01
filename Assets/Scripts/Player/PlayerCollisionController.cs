@@ -15,6 +15,12 @@ public class PlayerCollisionController : MonoBehaviour
   [SerializeField]
   private GameObject score;
 
+  [SerializeField]
+  private Animator animator;
+
+  [SerializeField]
+  private PlayerInputController inputController;
+
   public bool Grounded()
   {
     return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -36,8 +42,24 @@ public class PlayerCollisionController : MonoBehaviour
   {
     if (collision.gameObject.tag == "Enemy")
     {
-      // TODO!
-      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      GameOver();
     }
+  }
+
+  private void GameOver()
+  {
+    transform.parent.GetComponent<StopAllMovement>().Freeze();
+    animator.SetTrigger("Dying");
+  }
+
+  public void ShowGameOverScreen()
+  {
+    StartCoroutine(inputController.WaitForKeyPress(ReloadScene));
+  }
+
+  private void ReloadScene()
+  {
+    inputController.EnableInput();
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 }

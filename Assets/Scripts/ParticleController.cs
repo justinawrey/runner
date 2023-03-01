@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ParticleController : MonoBehaviour
+public class ParticleController : MonoBehaviour, IFreezable
 {
   [SerializeField]
   private ParticleSystem runningParticles;
@@ -29,5 +29,12 @@ public class ParticleController : MonoBehaviour
     landingParticles.Emit((int)Random.Range(6f, 10f));
     runningParticles.Play();
     runningParticles.Clear();
+  }
+
+  public void Freeze()
+  {
+    runningParticles.Stop();
+    launchingParticles.Stop();
+    landingParticles.Stop();
   }
 }

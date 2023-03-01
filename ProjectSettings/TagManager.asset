@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - ScrollContainer
+  - Beam
   layers:
   - Default
   - TransparentFX
@@ -60,4 +61,13 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2473348105
+    locked: 0
+  - name: Foreground 1
+    uniqueID: 330273793
+    locked: 0
+  - name: Score
+    uniqueID: 885231251
+    locked: 0
+  - name: Overlay
+    uniqueID: 3341886795
     locked: 0
