@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TitleScreen : MonoBehaviour
 {
@@ -13,6 +12,6 @@ public class TitleScreen : MonoBehaviour
 
   private void LoadGame()
   {
-    SceneManager.LoadScene("Game");
+    StartCoroutine(SceneLoader.AsyncLoad("Game"));
   }
 }

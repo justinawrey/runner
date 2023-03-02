@@ -61,6 +61,6 @@ public class PlayerCollisionController : MonoBehaviour
   private void ReloadScene()
   {
     inputController.EnableInput();
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    StartCoroutine(SceneLoader.AsyncLoad(SceneManager.GetActiveScene().name));
   }
 }
