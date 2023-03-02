@@ -54,6 +54,7 @@ public class PlayerCollisionController : MonoBehaviour
 
   public void ShowGameOverScreen()
   {
+    GameObject.Find("Root").transform.Find("Game Over").gameObject.SetActive(true);
     StartCoroutine(inputController.WaitForKeyPress(ReloadScene));
   }
 
