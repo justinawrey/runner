@@ -21,6 +21,9 @@ public class PlayerCollisionController : MonoBehaviour
   [SerializeField]
   private PlayerInputController inputController;
 
+  [SerializeField]
+  private Audio audioController;
+
   public bool Grounded()
   {
     return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -50,6 +53,7 @@ public class PlayerCollisionController : MonoBehaviour
   {
     transform.parent.GetComponent<StopAllMovement>().Freeze();
     animator.SetTrigger("Dying");
+    audioController.Die();
   }
 
   public void ShowGameOverScreen()

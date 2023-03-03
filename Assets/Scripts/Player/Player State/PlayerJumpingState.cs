@@ -15,6 +15,9 @@ public class PlayerJumpingState : PlayerBaseState
   private ParticleController particleController;
 
   [SerializeField]
+  private Audio audioController;
+
+  [SerializeField]
   private Animator animator;
 
   [SerializeField]
@@ -38,6 +41,7 @@ public class PlayerJumpingState : PlayerBaseState
     animator.ResetTrigger("Landing");
     animator.SetTrigger("Launching");
     particleController.OnLaunch();
+    audioController.Jump();
   }
 
   public override void Exit(PlayerContext ctx)
@@ -46,6 +50,7 @@ public class PlayerJumpingState : PlayerBaseState
     animator.SetTrigger("Landing");
     animator.SetFloat("Vertical Velocity", 0);
     particleController.OnLand();
+    audioController.Land();
   }
 
   public override void OnUpdate(PlayerContext ctx)
