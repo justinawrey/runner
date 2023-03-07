@@ -37785,6 +37785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 615941998}
+  - component: {fileID: 615941999}
   m_Layer: 0
   m_Name: Letters
   m_TagString: Untagged
@@ -37837,6 +37838,23 @@ Transform:
   m_Father: {fileID: 541943632}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &615941999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615941997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef0f41aa6fa64cb693c95f00444f6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lowerScale: 0.9
+  upperScale: 1.1
+  scaleSpeed: 0.4
+  rotationAmount: 1
+  rotationSpeed: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -64311,14 +64329,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   src: {fileID: 1673633136}
   jump: {fileID: 8300000, guid: 68f1daafb3f11458684cd4c776b3da8f, type: 3}
-  land: {fileID: 8300000, guid: ffd37aa90cb5f4445a1da22df661d0ae, type: 3}
+  land: {fileID: 8300000, guid: f732ae33e950a45d7929f2053626f74c, type: 3}
   die: {fileID: 8300000, guid: 227925417b44c463996d07b1a23a2971, type: 3}
   jumpPitch: 0.5
   landPitch: 0.5
   diePitch: 1
-  jumpVolume: 0.05
-  landVolume: 0.05
-  dieVolume: 1.5
+  jumpVolume: 0.08
+  landVolume: 0.5
+  dieVolume: 1
 --- !u!1 &1687758448
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - ScrollContainer
   - Beam
+  - BGMusic
   layers:
   - Default
   - TransparentFX

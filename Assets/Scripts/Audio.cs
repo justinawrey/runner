@@ -15,7 +15,6 @@ public class Audio : MonoBehaviour
   {
     src.clip = jump;
     src.volume = jumpVolume;
-    src.time = 0f;
     src.pitch = jumpPitch;
     src.Play();
   }
@@ -24,7 +23,6 @@ public class Audio : MonoBehaviour
   {
     src.clip = land;
     src.volume = landVolume;
-    src.time = 0.1f;
     src.pitch = landPitch;
     src.Play();
   }
@@ -33,7 +31,6 @@ public class Audio : MonoBehaviour
   {
     src.clip = die;
     src.volume = dieVolume;
-    src.time = 0f;
     src.pitch = diePitch;
     src.Play();
   }
